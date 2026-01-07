@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1r_vhqk8(uuh2w!nzb#(km54p!*)vjo)rrf_@g#acp_(vt2#j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -68,6 +68,11 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
 
 WSGI_APPLICATION = 'tutorial.wsgi.application'
 
