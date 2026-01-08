@@ -19,6 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("snippets.urls")),
-    path("api-auth/", include("rest_framework.urls")),#adds signin option in the DRF
+    path('snippet/', include("snippets.urls")),
+    path('notetaker/', include("notetaker.urls")),
+    # adds signin option in the DRF
+    path("api-auth/", include("rest_framework.urls")),
 ]

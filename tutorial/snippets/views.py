@@ -170,15 +170,17 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import renderers
 
+# This describes the starting endpoints
 
-@api_view(["GET"])
-def api_root(request, format=None):
-    return Response(
-        {
-            "users": reverse("user-list", request=request, format=format),
-            "snippets": reverse("snippet-list", request=request, format=format)
-        }
-    )
+
+# @api_view(["GET"])
+# def api_root(request, format=None):
+#     return Response(
+#         {
+#             "users": reverse("user-list", request=request, format=format),
+#             "snippets": reverse("snippet-list", request=request, format=format)
+#         }
+#     )
 
 
 class SnippetList(generics.ListCreateAPIView):
